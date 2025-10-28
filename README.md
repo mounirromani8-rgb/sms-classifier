@@ -1,85 +1,56 @@
-# sms-classifier
 # SMS Spam/Ham Classifier
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/mounirromani8-rgb/sms-classifier)](https://github.com/mounirromani8-rgb/sms-classifier/commits)
-[![GitHub contributors](https://img.shields.io/github/contributors/mounirromani8-rgb/sms-classifier)](https://github.com/mounirromani8-rgb/sms-classifier/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/mounirromani8-rgb/sms-classifier)](https://github.com/mounirromani8-rgb/sms-classifier/stargazers)
-[![GitHub followers](https://img.shields.io/github/followers/mounirromani8-rgb)](https://github.com/mounirromani8-rgb?tab=followers)
+[![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-orange)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-GPL--3.0-green)](LICENSE)
 
 ---
 
 ## About The Project
 
-Le but de ce projet est de réaliser une **classification de SMS** pour détecter si un message est **spam** ou **ham**. Le projet utilise des techniques de **Machine Learning et NLP** avec une interface web Streamlit.
+Le but de ce projet est de classifier des messages SMS en **spam** ou **ham** en utilisant des techniques de Machine Learning.  
 
-### Étapes principales :
+Les principales étapes du projet sont :
 
-1. Récolte des données
-2. Nettoyage et préparation des données :
-   - Supprimer la ponctuation
-   - Tokenization
-   - Élimination des stop words
-   - Stemming / Lemmatization
-3. Vectorisation :
-   - N-grams
-   - TF-IDF
-4. Feature Engineering
-5. Création des jeux de données d’entraînement et de test
-6. Entraînement de modèles ML
-7. Évaluation :
-   - Cross-Validation (K-fold)
-   - Matrice de confusion
-   - Métriques : precision, recall, accuracy
-
-
-
-## Modèles utilisés
-
-- Naive Bayes (MultinomialNB)
-- SVM (optionnel si extension)
-- Évaluation via precision, recall et accuracy
+1. **Récolte des données** : Dataset `SMSSpamCollection.txt`  
+2. **Nettoyage et préparation des données** :  
+   - Supprimer la ponctuation  
+   - Tokenization  
+   - Suppression des stop words  
+   - Stemming / Lemmatization  
+3. **Vectorisation du texte** :  
+   - TF-IDF  
+   - N-grams  
+4. **Feature Engineering** : enrichir et transformer les données  
+5. **Construction des jeux de données** pour entraînement et test  
+6. **Entraînement et évaluation des modèles** :  
+   - Métriques : Precision, Recall, Accuracy  
+   - Matrice de confusion  
+7. **Déploiement** : interface web avec Streamlit  
 
 ---
 
-## Keywords
+## Live Demo
 
-Machine Learning, NLP, tokenizer, stemming, lemmatization, vectorisation, N-grams, tf-idf, Feature Engineering, Cross-Validation, k-fold, Naive Bayes
-
----
-
-## Built With
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NLTK](https://img.shields.io/badge/NLTK-FF7F50?style=for-the-badge&logo=nltk&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-
----
-
-## Packages & Library
-
-```python
-import pandas as pd
-import re
-import string
-import nltk
-from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-import joblib
-import streamlit as st
-
-
----
-## Déploiement / Live Demo
-
-L'application **SMS Spam/Ham Classifier** est disponible en ligne :
+L'application est disponible en ligne :
 
 [🔗 Tester l'application](https://sms-classifier-1-wzvn.onrender.com/)
 
-Pour lancer l'application en local :
+---
+
+## Dataset
+
+Le dataset **SMSSpamCollection.txt** contient deux informations principales : le contenu d'un SMS et le label `spam` ou `ham`.  
+
+Sources :
+
+1. Almeida, T.A., Gómez Hidalgo, J.M., Yamakami, A. *Contributions to the Study of SMS Spam Filtering: New Collection and Results*. DOCENG'11, 2011.  
+2. Gómez Hidalgo, J.M., Almeida, T.A., Yamakami, A. *On the Validity of a New SMS Spam Collection*. ICMLA'12, 2012.  
+3. Almeida, T.A., Gómez Hidalgo, J.M., Silva, T.P. *Towards SMS Spam Filtering: Results under a New Dataset*. IJISS, 2013.  
+
+---
+
+## Installation & Run Locally
 
 ```bash
 # Cloner le repo
