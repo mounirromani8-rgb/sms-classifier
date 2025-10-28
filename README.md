@@ -31,32 +31,6 @@ Le but de ce projet est de réaliser une **classification de SMS** pour détecte
    - Matrice de confusion
    - Métriques : precision, recall, accuracy
 
----
-## Déploiement / Live Demo
-
-L'application **SMS Spam/Ham Classifier** est disponible en ligne :
-
-[🔗 Tester l'application](https://sms-classifier-1-wzvn.onrender.com/)
-
-Pour lancer l'application en local :
-
-```bash
-# Cloner le repo
-git clone https://github.com/mounirromani8-rgb/sms-classifier.git
-cd sms-classifier
-
-# Créer un environnement virtuel
-python -m venv svenv
-# Linux / macOS
-source svenv/bin/activate
-# Windows
-.\svenv\Scripts\activate
-
-# Installer les dépendances
-pip install -r requirements.txt
-
-# Lancer l'application Streamlit
-streamlit run src/sms-detector.py
 
 
 ## Modèles utilisés
@@ -96,3 +70,31 @@ from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import joblib
 import streamlit as st
+
+
+---
+## Déploiement / Live Demo
+
+L'application **SMS Spam/Ham Classifier** est disponible en ligne :
+
+[🔗 Tester l'application](https://sms-classifier-1-wzvn.onrender.com/)
+
+Pour lancer l'application en local :
+
+```bash
+# Cloner le repo
+git clone https://github.com/mounirromani8-rgb/sms-classifier.git
+cd sms-classifier
+
+# Créer un environnement virtuel
+python -m venv svenv
+# Linux / macOS
+source svenv/bin/activate
+# Windows
+.\svenv\Scripts\activate
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Lancer l'application Streamlit
+streamlit run src/sms-detector.py
